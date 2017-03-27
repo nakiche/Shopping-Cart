@@ -16,14 +16,18 @@
 
 			case "remove":
 			
+				
 				$arreglo=$_SESSION['carrito'];
 			
-				for($i=0;$i<count($arreglo);$i++)
+				for($c=0;$c<count($arreglo);$c++)
 				{
-					if($arreglo[$i]['Id']==$_GET['code'])
+					if($arreglo[$c]['Id']==$_GET['code'])
 					{
 
-					unset($_SESSION['carrito'][$i]);
+					unset($_SESSION['carrito'][$c]);
+					$_SESSION['carrito']=array_values($_SESSION['carrito']);
+
+					//print_r(array_values($_SESSION['carrito']));
 
 						if (empty($_SESSION['carrito']))
 						{
@@ -33,8 +37,6 @@
 					}
 
 
-				
-			
 				}
 					
 			break;
@@ -218,7 +220,7 @@
 		if(isset($_SESSION['carrito'])) /*Valido si existe una sesion previa*/
 		{
 			$datos=$_SESSION['carrito']; /*almaceno los datos de la sesion en un array*/
-
+			//var_dump($datos);
 
 			
 			for($i=0;$i<count($datos);$i++)  /*Cargo todos los datos que tengo en el carrito y multiplico la cantidad por los precios para subtotalizar*/
@@ -241,11 +243,11 @@
                         
                      	<span class="subtotal">Subtotal:<?php echo ' $' . $datos[$i]['Cantidad']*$datos[$i]['Precio'].' ';?></span><br>
 
-                         <a href="./carritodecompras.php?action=remove&code=<?php echo $datos[$i]['Id']; ?>" >Remove Item</a>
-                        
+                        <!-- <a href="./carritodecompras.php?action=remove&code=<?php echo $datos[$i]['Id']; ?>" >Remove Item</a> -->
+                        <input type="submit" class="button" value="Remove Item" onclick="document.location.href='./carritodecompras.php?action=remove&code=<?php echo $datos[$i]['Id']; ?>'">
                         
                         <!--<a href="#" id="get"   
-                        data-id="<?php echo $datos[$i]['Id'];?>"
+                        data-id="<?php echo $datos[$i]['Id'];?>"Remove Item
                         data_precio="<?php echo $datos[$i]['Precio'];?>"
                         data-cantidad="<?php echo $datos[$i]['Cantidad'];?>"
                         >Remove from car</a>-->
