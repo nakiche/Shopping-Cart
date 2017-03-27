@@ -23,16 +23,20 @@
 					if($arreglo[$i]['Id']==$_GET['code'])
 					{
 
-						
-					$numero=$i;
-					unset($arreglo[$numero]);
+					unset($_SESSION['carrito'][$i]);
+
+						if (empty($_SESSION['carrito']))
+						{
+							unset($_SESSION['carrito']);
+						}
+
 					}
+
+
 				
 			
 				}
-			
-			
-		
+					
 			break;
 		
 			case "empty":
@@ -184,7 +188,7 @@
         
         <div class="inline">
     		
-    		<h3>Shopping cart</h3><br>
+    		<h3>Shipping and payment</h3><br>
     		
 
     		<?php
@@ -229,15 +233,15 @@
                     <span><?php echo $datos[$i]['Nombre'];?></span><br>
                     <span>Price: <?php echo  '$ ' .$datos[$i]['Precio'].'';?></span><br>
                     <span>Quantity: 
-                    	<input type="number" value="<?php echo $datos[$i]['Cantidad'];?>"
+                    	<input type="text" value="<?php echo $datos[$i]['Cantidad'];?>"
                         data-id="<?php echo $datos[$i]['Id'];?>"
                         data-precio="<?php echo $datos[$i]['Precio'];?>"
-                        class="cantidad"></span><br>
+                        class="cantidad" onkeypress="return isNumberKey(event);"></span><br>
 
                         
                      	<span class="subtotal">Subtotal:<?php echo ' $' . $datos[$i]['Cantidad']*$datos[$i]['Precio'].' ';?></span><br>
 
-                         <!--<a href="./carritodecompras.php?action=remove&code=<?php echo $datos[$i]['Id']; ?>" >Remove CASE</a>-->
+                         <a href="./carritodecompras.php?action=remove&code=<?php echo $datos[$i]['Id']; ?>" >Remove Item</a>
                         
                         
                         <!--<a href="#" id="get"   

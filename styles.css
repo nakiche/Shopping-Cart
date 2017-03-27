@@ -205,6 +205,16 @@ font:0.8em 'Montserrat Alternates';
 
 }
 
+.producto input[type="number"]
+{
+	width: 40px;
+	height: 20px;
+	background-color: #c8c8c8;
+	text-align: center;
+
+
+}
+
 .button
 {
 

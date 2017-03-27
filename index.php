@@ -90,12 +90,12 @@ $current_status=($_SESSION['current_cart']);
 				<div class="producto">
 					<div class="centrado">
 					
-					<form action="carritodecompras.php" method="get" onclick="return validacion(this);">
+					<form action="carritodecompras.php" method="get" >
 					<img src="./images/<?php echo $fila['imagen'];?>"><br>
 					<span>Product: <?php echo $fila['nombre'] ;?></span><br>
 					<span>Price: <?php echo '$ ' .$fila['precio']. ' ';?></span><br>
 					<input type="hidden" value="<?php echo $fila['ID'] ;?>" name="id">
-					<span>Quantity:<input type="number" value="1" name="quantity" onfocus="this.blur();" min="1" class="test" onkeypress="return isNumberKey(event);"></span><br>
+					<span>Quantity:<input type="number" value="1" name="quantity" onfocus="this.blur();" min="1" onkeypress="return noEntries(event);"></span><br>
 					<input type="submit" class="button" value="Add to cart!" >
 
 					</form>
