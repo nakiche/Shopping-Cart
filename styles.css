@@ -1,0 +1,262 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/css?family=Montserrat+Alternates);
+
+body
+{
+	width:100%;
+	margin:0;
+	padding:0; 
+	background-color:#999;
+}
+	
+html
+{ 
+	padding:0;
+	margin:0;
+}
+
+a 
+{
+	text-decoration:none;
+}
+
+a:hover
+{
+	text-decoration:underline;
+} 
+
+/*header*/
+.block_header 
+{
+	 margin:0; 
+	 padding:0;
+	 background-color:#0c56c1;
+	 
+}
+
+.header 
+{
+	margin:0 auto;
+	padding:0 ; 
+	width: 80%;
+}
+
+.logo 
+{
+	padding:0;
+	margin:20px 0 0 20px; 
+	width:30%; 
+	float: left;
+}
+
+.header h1
+{ 
+	padding:0; 
+	margin: 35px 25px ;
+	display: inline-block;
+	width: 30%;
+	text-align:center;
+	font:3.5em 'Montserrat Alternates';
+}
+
+.car 
+{ 
+	display:block;
+	width:15%; 
+	float: right; 
+	padding:0; 
+	margin:0;
+}
+
+/*products*/
+.FBG
+{
+	margin:0;
+	padding:0; 
+	background-color:#999;
+}
+
+
+.FBG_content
+{	
+	min-height:450px;
+	width: 85%;
+	border: 2px inset #DDD;
+	padding: 5px 5px;
+	margin:0 auto;
+	background-color:#999;
+}
+
+
+.inline h1
+{ 
+	padding:0; 
+	margin: 0 ;
+	width: 55%;
+	display: inline-block;
+	text-align:right;
+	font:3.5em 'Montserrat Alternates';
+}
+
+.cart
+{
+	display: inline-block;
+	width: 10%;
+	padding: 0;
+	margin: 0;
+	float: right;
+}
+
+.inline h2
+{ 
+	padding:0; 
+	margin:0;
+	display: inline-block;
+	font:1em 'Montserrat Alternates';
+}
+
+.inline h3
+{
+	font:2em 'Montserrat Alternates';
+	display: inline-block;
+	width: 100%;
+	color:blue;
+	text-align: center;
+	padding: 0; 
+	margin:0;
+}
+
+.inline a
+{
+	font:4em 'Montserrat Alternates';
+	color:red;
+
+}
+
+.FBG_content a
+{
+	font:1em 'Montserrat Alternates';
+	color:blue;
+	
+}
+
+.FBG_content p
+{
+	text-align: center;
+}
+
+.FBG_content h1
+{
+	font:2em 'Montserrat Alternates';
+	color:blue;
+
+}
+
+.FBG_content h2
+{
+	font:1.2em 'Montserrat Alternates';
+	text-align: center;
+}
+
+
+/*products*/
+.producto
+{
+	width: 23%;
+	height: auto;
+	background-color: #c8c8c8;
+	border: 2px inset #DDD;
+	display: inline-block;
+	margin: 10px 2px 2px 11px;
+	padding: 0;
+}
+
+.cantidad 
+{
+text-align: center;
+font:0.8em 'Montserrat Alternates';
+}
+
+
+.test
+{
+text-align: center;
+font:0.8em 'Montserrat Alternates';
+}
+
+.producto img
+{
+	margin:4px 2px;
+}
+
+.producto span
+{
+	font:0.8em 'Montserrat Alternates';
+}
+
+.producto a
+{
+	font:0.8em 'Montserrat Alternates';
+}
+
+.producto input
+{
+	width: 100px;
+
+}
+
+.button
+{
+
+ margin: 4px 4px;	
+ background-color: #999;
+ width: 100px;
+ font:0.8em 'Montserrat Alternates';
+ color: red;
+
+}
+
+
+
+/*centered*/	
+.centrado
+{
+	text-align: center;
+}
+
+
+.details span
+{
+	font:0.8em 'Montserrat Alternates';
+
+}
+
+
+
+/*select transport type*/
+.select 
+{
+  direction: rtl;
+  border: 1px inset #ccc;
+  width: 200px;
+  background-color: #999;
+  font: 1em 'Montserrat Alternates'; 
+}
+
+.button2
+{
+
+ background-color: #999;
+ width: 100px;
+ font:1em 'Montserrat Alternates';
+ color: red;
+
+}
+
+/*clear*/
+.clr
+{
+	clear:both;
+	padding:0; 
+	margin:0; 
+}
