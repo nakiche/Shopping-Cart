@@ -158,6 +158,17 @@ a:hover
 	text-align: center;
 }
 
+.error2
+{
+background: none repeat scroll 0 0 #BC1010; 
+border-radius: 20px 20px 20px 20px; 
+color: white; 
+font-weight: bold; 
+padding: 10px 20px; 
+text-align: center;
+display: none;
+
+}
 
 /*products*/
 .producto
@@ -211,8 +222,13 @@ font:0.8em 'Montserrat Alternates';
 	height: 20px;
 	background-color: #c8c8c8;
 	text-align: center;
+}
 
-
+.producto input[type="text"]
+{
+	width: 40px;
+	height: 20px;
+	text-align: center;
 }
 
 .button

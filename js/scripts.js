@@ -3,27 +3,33 @@ function isNumberKey(evt)
       {
          var charCode = (evt.which) ? evt.which : event.keyCode
          if (charCode > 31 && (charCode < 48 || charCode > 57))
+         {
             return false;
-
-         return true;
+         }
+         
       }
 
  function validacion()
 	{	
 
 	 //var i=document.getElementsByClassName('test').length; 
+	  var x = document.getElementsByClassName("cantidad");
 	 
-	 var x = document.getElementsByClassName("cantidad");
-		
 		for (i = 0; i < x.length; i++)
 		{
 			
-    		 if (x[i].value  <= 0  || x[i].value == 0 || /^\s+$/.test(x[i]))
+    		 if (x[i].value == 0)
     		 {
+    		 	var v= document.getElementsByClassName('error2');
+				v[0].style.display ="block";
+				v[0].innerHTML='Quantity cannot be less than 1';
     		 	 //alert('Quantity can not be less than 1 or empty ' + x[i].value);
-    		 	 alert('Quantity can not be less than 1 or empty');
+    		 	 //alert('Quantity can not be less than 1 or empty');
     		 	 x[i].focus();
     		 	 return false;
+    		 }else{
+    		 		var v= document.getElementsByClassName('error2');
+					v[0].style.display ="none";
     		 }
 		}
 
@@ -40,21 +46,34 @@ function noEntries(evt)
 var inicio=function()
 
 {   //funcion para actualizar la cantidad con la tecla enter
+	
 	$(".cantidad").keyup(function(e)
 	{
 		if($(this).val()!='')
 		{ 
+		
+
 			if(e.keyCode==13)
 			{
 				var id=$(this).attr('data-id');
 				var precio=$(this).attr('data-precio');
 				var cantidad=$(this).val();
 				
-				if (cantidad==0)
-				{
-					alert('error');
-					return false;
-				}
+				// if (cantidad<=0)
+				// {
+				// 	//$(this).parentsUntil('.producto').find('.error').text('Quantity cannot be less than 1');
+					
+				// 	var v= document.getElementsByClassName('error2');
+				// 	v[0].style.display ="block";
+				// 	v[0].innerHTML='Quantity cannot be less than 1';
+				// 	return false;
+
+				// 	}else{
+				
+				// 	var v= document.getElementsByClassName('error2');
+				// 	v[0].style.display ="none";
+
+				// }
 
 				$(this).parentsUntil('.producto').find('.subtotal').text('Subtotal: $' + ((cantidad*precio).toFixed(2)));
 				//AJAX
@@ -108,10 +127,14 @@ function validar()
 
 		if( indice == "" ) 
 		{  	
-  		alert("Please choose a transport type");
+  		//alert("Please choose a transport type");
+  		var v= document.getElementsByClassName('error2');
+  		v[0].style.display ="block";
+		v[0].innerHTML='Please choose a transport type';
   		document.getElementById("opciones").focus();
 		
   		return false;
+  		
   		}
 		
 }

@@ -213,7 +213,7 @@
 		
 		$current=$_SESSION['current_cash'];
     	$total=0;
-
+    	$result="test";
     	/*for current status*/
     	$current_status=0;
 
@@ -238,20 +238,22 @@
                     	<input type="text" value="<?php echo $datos[$i]['Cantidad'];?>"
                         data-id="<?php echo $datos[$i]['Id'];?>"
                         data-precio="<?php echo $datos[$i]['Precio'];?>"
-                        class="cantidad" onkeypress="return isNumberKey(event);"></span><br>
+                        class="cantidad" onkeypress="return isNumberKey(event);" onkeyup="validacion();"></span><br>
 
                         
                      	<span class="subtotal">Subtotal:<?php echo ' $' . $datos[$i]['Cantidad']*$datos[$i]['Precio'].' ';?></span><br>
 
                         <!-- <a href="./carritodecompras.php?action=remove&code=<?php echo $datos[$i]['Id']; ?>" >Remove Item</a> -->
-                        <input type="submit" class="button" value="Remove Item" onclick="document.location.href='./carritodecompras.php?action=remove&code=<?php echo $datos[$i]['Id']; ?>'">
+                        <input type="submit" class="button" value="Remove Item" onclick="document.location.href='./carritodecompras.php?action=remove&code=<?php echo $datos[$i]['Id']; ?>'"><br>
                         
                         <!--<a href="#" id="get"   
                         data-id="<?php echo $datos[$i]['Id'];?>"Remove Item
                         data_precio="<?php echo $datos[$i]['Precio'];?>"
                         data-cantidad="<?php echo $datos[$i]['Cantidad'];?>"
                         >Remove from car</a>-->
+                       <span class="error"></span>
 				</div>
+
         	</div>
 
         	
@@ -268,7 +270,8 @@
 			}
 
 			/*Current car status*/
-						
+			
+			echo '<h2 class="error2"></h2>';			
 			echo '<h2 id="total">Items in your cart: ' .$current_status .' / Subtotal: $' .number_format($total,2). '</h2>';
 			echo '<h2>Your Current Cash is: $'.number_format($current,2). '</h2>';
 			echo '<p><a href="./carritodecompras.php?action=empty">Remove cart</a></p>';
