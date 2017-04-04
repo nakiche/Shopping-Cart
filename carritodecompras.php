@@ -299,14 +299,14 @@
 			//{
        	?>
        		<div class="centrado">
-       		<form action="shipoptionselect.php" name="shipping" method="get" onsubmit="return validar(this);" >
+       		<form action="shipoptionselect.php" name="shipping" method="get" onsubmit="return validarSelect(this);" onchange="validarSelect2();" >
        			
        			<select id="opciones" name="pick" class="select">
 				<option value="" selected="">Select Transport type</option>
   				<option value="pickup" id="Pick">Pick up - Free</option>
  				<option value="ups" id="UPS">UPS - 5$</option>
   				</select>
-  				<input type="submit" class="button2" value="Pay!"  >
+  				<input type="submit" class="button2" value="Pay!" onclick="return validacion();" >
 
   			</form>
 

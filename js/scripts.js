@@ -27,6 +27,8 @@ function isNumberKey(evt)
     		 	 //alert('Quantity can not be less than 1 or empty');
     		 	 x[i].focus();
     		 	 return false;
+    		 	 
+
     		 }else{
     		 		var v= document.getElementsByClassName('error2');
 					v[0].style.display ="none";
@@ -53,8 +55,8 @@ var inicio=function()
 		{ 
 		
 
-			if(e.keyCode==13)
-			{
+			//if(e.keyCode==13)
+			//{
 				var id=$(this).attr('data-id');
 				var precio=$(this).attr('data-precio');
 				var cantidad=$(this).val();
@@ -90,7 +92,7 @@ var inicio=function()
 					  
 				  });
 				
-			}
+			//}
 		}
 });
 
@@ -121,7 +123,7 @@ $("#get").click(function(e)
 }
 
 
-function validar()
+function validarSelect()
 {	
 	indice=document.getElementById("opciones").selectedIndex;
 
@@ -134,11 +136,24 @@ function validar()
   		document.getElementById("opciones").focus();
 		
   		return false;
+
+  		validarSelect2();
   		
   		}
 		
 }
 
+function validarSelect2()
+{	
+	indice=document.getElementById("opciones").selectedIndex;
+
+		if( indice != "" ) 
+		{  	
+  		var v= document.getElementsByClassName('error2');
+		v[0].style.display ="none";
+  		}
+		
+}
  
 		// if ( valor <= 0  || valor.length == 0 || /^\s+$/.test(valor)) 
 		//  {
