@@ -107,6 +107,14 @@ a:hover
 	float: right;
 }
 
+.cart2
+{
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	
+}
+
 .inline h2
 { 
 	padding:0; 
@@ -150,6 +158,7 @@ a:hover
 	font:2em 'Montserrat Alternates';
 	color:blue;
 
+
 }
 
 .FBG_content h2
@@ -167,9 +176,19 @@ font-weight: bold;
 padding: 10px 20px; 
 text-align: center;
 display: none;
-
 }
 
+.error3
+{
+background: none repeat scroll 0 0 #BC1010; 
+border-radius: 20px 20px 20px 20px; 
+color: white; 
+font-weight: bold; 
+padding: 10px 20px; 
+text-align: center;
+display: block;
+
+}
 /*products*/
 .producto
 {

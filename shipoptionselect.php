@@ -31,14 +31,7 @@
 	<div class="FBG">
     	<div class="FBG_content"> 
         
-			<div class="inline">
-    		
-    		
-    	 		<div class="cart" >
-    	 		<a href="./carritodecompras.php" title="My car"><img src="images/carrito.png" width="32" height="32" border="0" alt="mycart"></a>
-    	 			
-    	 			 	
-			</div>
+			
         
 
 	<?php
@@ -88,11 +81,11 @@
 				$current=$current-$subtotal;
 
 			
-				echo '<h1>Thank you for shopping</h1><br>';
-				echo '<h2>Order summary:</h2><br>';
-				echo '<h2>Item(s) Subtotal: $' .number_format($total,2). '</h2><br>';
-				echo '<h2>Shipping & Handling: $' .number_format($transport,2). ' / '.$nombre. ' </h2><br>';
-				echo '<h2>Order Grand total: $' .number_format($subtotal,2). '</h2><br>';
+				echo '<h2>Thank you for shopping</h2><br>';
+				echo '<h2>Order summary:</h2>';
+				echo '<h2>Item(s) Subtotal: $' .number_format($total,2). '</h2>';
+				echo '<h2>Shipping & Handling: $' .number_format($transport,2). ' / '.$nombre. ' </h2>';
+				echo '<h2>Order Grand total: $' .number_format($subtotal,2). '</h2>';
 				echo '<h2>Your Current Cash is: $'.number_format($current,2). '</h2>';
 			
 				unset($_SESSION['carrito']);
@@ -104,17 +97,29 @@
 
 
 			}else{
-				echo '<h2>Sorry your current cash is too low, check your cart</h2><br>';
+				echo '<h2 class="error3">Sorry your current cash is too low, check your cart</h2>';
+				
 				$_SESSION['current_cash'] = $current;
 
+				?>
 				
+				<div>
+    		
+    		
+    	 		<div class="cart2" >
+    	 		<a href="./carritodecompras.php" title="My cart"><img src="images/carrito.png" width="50" height="50" border="0" alt="mycart"></a><br>
+    	 		</div>	
+    	 			 	
+				</div>
+
+				<?php
 			}
 
 
 			
 		}else{	
 			
-			echo '<h2>Your cart is empty</h2><br>';
+			echo '<h2>Your cart is empty</h2>';
 			echo '<h2>Your Current Cash is: $'.number_format($current,2). '</h2>';
 
 			
