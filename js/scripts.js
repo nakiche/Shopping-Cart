@@ -179,8 +179,24 @@ function validarSelect2()
 
 
 
-
-	
+	$(function(){
+               $('.rating').on('rating.change', function(event, value, caption) {
+               	productId = $(this).attr('productId');
+                $.ajax({
+                  url: "rating.php",
+                  dataType: "json",
+                  data: {vote:value, productId:productId, type:'save'},
+                  success: function( data ) {
+                     alert("rating saved");
+                  },
+              error: function(e) {
+                // Handle error here
+                console.log(e);
+              },
+              timeout: 30000  
+            });
+              });
+        });	
 
 $(document).on('ready',inicio);
 
