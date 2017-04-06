@@ -12,8 +12,12 @@
 <meta charset="utf-8"/>
 	<title>CBA SHOPPING CART</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" rel="stylesheet">
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<script type="text/javascript" src="./js/scripts.js"></script>
+	<script src="./js/star-rating.min.js" type="text/javascript"></script>
+
 </head>
 
 <body>
@@ -46,6 +50,7 @@
         
 	<?php
 		require 'conexion.php';
+		include_once 'rating.php';
 		
 		$conexion=mysqli_connect($db_host,$db_usuario,$db_contra);
 		
@@ -81,7 +86,8 @@
 					<span>Price: <?php echo '$ ' .$fila['precio']. ' ';?></span><br>
 					<input type="hidden" value="<?php echo $fila['ID'] ;?>" name="id">
 					<span>Quantity:<input type="number" value="1" name="quantity" onfocus="this.blur();" min="1" onkeypress="return noEntries(event);"></span><br>
-					<input type="submit" class="button" value="Add to cart!" >
+					<input type="submit" class="button" value="Add to cart!" ><br>
+					<input value="<?= getRatingByProductId(connect(), $fila['product_id']); ?>" type="number" class="rating" min=0 max=5 step=0.1 data-size="md" data-stars="5" productId="<?php echo $fila['product_id'] ;?>">
 
 					</form>				
                 	

@@ -30,11 +30,7 @@ $current_status=($_SESSION['current_cart']);
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script type="text/javascript"  src="./js/scripts.js"></script>
 	<script src="./js/star-rating.min.js" type="text/javascript"></script>
-
-
-	<script type="text/javascript">
-
-    </script>
+	
 </head>
 	
 <body>
@@ -68,7 +64,7 @@ $current_status=($_SESSION['current_cart']);
         
 		<?php
 			require 'conexion.php';
-			include_once('rating.php');
+			include_once 'rating.php';
 
 			 
 		
