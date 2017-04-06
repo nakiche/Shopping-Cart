@@ -103,6 +103,8 @@ $current_status=($_SESSION['current_cart']);
 					<a href="./detalles.php?id=<?php echo $fila['ID'];?>">Details</a>
 					</div>
 				</div>
+
+				
         
 		<?php
 			

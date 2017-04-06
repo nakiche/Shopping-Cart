@@ -269,17 +269,24 @@ font:0.8em 'Montserrat Alternates';
 	text-align: center;
 }
 
+.justificado
+{
+
+	text-align: justify;
+
+}
 
 .details
 {
 
 	width: 48%;
-	height: 250px;
+	height: 280px;
 	background-color: #c8c8c8;
 	border: 2px solid #DDD;
 	margin: 10px 2px 2px 11px;
 	padding: 0;
-	display: inline-block;
+	float: left;
+
 
 }
 

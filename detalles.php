@@ -75,12 +75,6 @@
 
 			<div class="details">
 				<div class="centrado">
-				<span><?php echo $fila['descripcion'] ;?></span>
-				</div>
-			</div>
-
-			<div class="details">
-				<div class="centrado">
 					<form action="carritodecompras.php" method="get" >
 					<img src="./images/<?php echo $fila['imagen'];?>"><br>
 					<span>Product: <?php echo $fila['nombre'] ;?></span><br>
@@ -91,6 +85,12 @@
 
 					</form>				
                 	
+				</div>
+			</div>
+
+			<div class="details">
+				<div class="justificado">
+				<span><?php echo $fila['descripcion'] ;?></span>
 				</div>
 			</div>
 
