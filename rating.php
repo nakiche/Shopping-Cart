@@ -10,7 +10,7 @@ function connect() {
 $hostname = "localhost";
 $username = "root";
 $password = "";
-$dbname = "rating";
+$dbname = "carritocompras";
   $con = mysqli_connect($hostname, $username, $password, $dbname);	
   return $con;
 }

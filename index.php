@@ -30,7 +30,7 @@ $current_status=($_SESSION['current_cart']);
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script type="text/javascript"  src="./js/scripts.js"></script>
 	<script src="./js/star-rating.min.js" type="text/javascript"></script>
-	
+
 </head>
 	
 <body>
@@ -55,7 +55,7 @@ $current_status=($_SESSION['current_cart']);
 
     		<div class="inline">
     		
-    		<h1>Products</h1>
+    			<h1>Products</h1>
     	 		<div class="cart" >
     	 		<a href="./carritodecompras.php" title="<?php echo "My Cart - " . $current_status . " Items" ;?>"><img src="images/carrito.png" width="32" height="32" border="0" alt="mycart"></a>
     	 		<h2><?php echo '(' . $current_status. ')';?></h2>	
