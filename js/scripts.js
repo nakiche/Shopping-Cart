@@ -187,7 +187,7 @@ function validarSelect2()
                   dataType: "json",
                   data: {vote:value, productId:productId, type:'save'},
                   success: function( data ) {
-                     alert("rating saved");
+                     //alert("rating saved");
                   },
               error: function(e) {
                 // Handle error here

@@ -58,7 +58,7 @@ a:hover
 .clear-rating{color:#aaa;cursor:not-allowed;font-size:60%;padding-right:5px}
 .clear-rating-active{cursor:pointer!important}
 .clear-rating-active:hover{color:#843534}
-.rating-container .caption{color:#999;font-size:60%;margin-top:-.6em;margin-left:5px;margin-right:0}
+.rating-container .caption{color:#999;font-size:60%;margin-top:-0.6em;margin-left:5px;margin-right:0}
 .rating-rtl 
 .caption{margin-right:5px;margin-left:0}@media print{.rating-container .clear-rating{display:none}}
 
@@ -311,14 +311,14 @@ font:0.8em 'Montserrat Alternates';
 {
 
 	text-align: justify;
-
+	font:1.5em 'Montserrat Alternates';
 }
 
 .details
 {
 
 	width: 48%;
-	height: 280px;
+	height: 350px;
 	background-color: #c8c8c8;
 	border: 2px solid #DDD;
 	margin: 10px 2px 2px 11px;
@@ -336,6 +336,8 @@ font:0.8em 'Montserrat Alternates';
 
 
 
+
+
 .details input[type="number"]
 {
 	width: 40px;
@@ -344,7 +346,12 @@ font:0.8em 'Montserrat Alternates';
 	text-align: center;
 }
 
-
+.width 
+{
+	width: 50%;
+	display: inline-block;
+	
+}
 
 /*select transport type*/
 .select 

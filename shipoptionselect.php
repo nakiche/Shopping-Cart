@@ -107,7 +107,7 @@
     		
     		
     	 		<div class="cart2" >
-    	 		<a href="./carritodecompras.php" title="My cart"><img src="images/carrito.png" width="50" height="50" border="0" alt="mycart"></a><br>
+    	 		<a href="./carritodecompras.php" title="My cart"><img src="images/shop-cart-add-icon.png" width="80" height="80" border="0" alt="mycart"></a><br>
     	 		</div>	
     	 			 	
 				</div>
