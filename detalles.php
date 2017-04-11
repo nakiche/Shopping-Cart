@@ -23,17 +23,15 @@
 <body>
 	<div class="block_header">
        <div class="header">
-    		 <div class="logo">
-              <a href="./index.php" title="Home"><img src="images/logo.png" width="265" height="78" 	border="0" alt="logo"></a>
+    		 
+        	 <div class="logo">
+              <img src="images/sc.png" width="265" height="78" 	border="0" alt="logo">
         	 </div>
     
-			 <h1>
-             E-SHOP
-             </h1>
-             
-            
-         <div class="clr"></div>
-    	</div>
+			           
+             <div class="clr"></div>
+  		</div>  
+  		 <div class="clr"></div>
     </div>   
              
 	<div class="FBG">
@@ -105,6 +103,11 @@
 				</div>
 			</div>
 
+			<div class="centrado">
+				<a href="index.php"> Search products </a>   
+			</div>
+
+
 			
 			
         
@@ -115,11 +118,12 @@
 			
 			?>
 
-		  <div class="clr"></div><br>
-		  <a href="index.php"> Search products </a>
+		  
+		  
 		</div>
     	 <div class="clr"></div>
-	</div>             
+	</div>          
+
 
 </body>
 </html>
