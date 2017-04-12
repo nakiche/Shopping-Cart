@@ -96,30 +96,6 @@ var inicio=function()
 		}
 });
 
-
-	
-$("#get").click(function(e)
-{
-
-				e.preventDefault();
-				var id=$(this).attr('data-id');
-				var precio=$(this).attr('data-precio');
-				var cantidad=$(this).attr('data-cantidad');
-				//$(this).parentsUntil('.producto').find('.subtotal').text('Subtotal: $'+ (precio*cantidad));
-
-				$.post('./js/eliminarDatos.php', 
-				{
-					Id:id,
-					Precio:precio,
-					Cantidad:cantidad
-
-				}, function(e) 
-					{
-				  $("#total").text('Total: ' +e);
-				   });
-});
-
-
 }
 
 

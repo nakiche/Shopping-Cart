@@ -19,7 +19,7 @@
        <div class="header">
     		 
         	 <div class="logo">
-              <img src="images/sc.png" width="265" height="78" 	border="0" alt="logo">
+              <a href="./index.php"><img src="images/sc.png" width="265" height="78" 	border="0" alt="logo"></a>
         	 </div>
     
 			           

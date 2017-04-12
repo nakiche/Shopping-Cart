@@ -15,7 +15,7 @@
 		if($arreglo[$i]['Id']==$_POST['Id'])
 		{
 			$numero=$i;
-								}
+								
 		}
 		
 		$arreglo[$numero]['Cantidad']=$_POST['Cantidad'];
@@ -29,6 +29,8 @@
 			$_SESSION['current_cart'] = $current_status;  
 			
 		}
+
+	}
 		
 	$_SESSION['carrito']=$arreglo;
 	
