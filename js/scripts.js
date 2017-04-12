@@ -99,6 +99,11 @@ var inicio=function()
 }
 
 
+
+	
+
+
+
 function validarSelect()
 {	
 	indice=document.getElementById("opciones").selectedIndex;

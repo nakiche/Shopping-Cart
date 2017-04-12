@@ -15,7 +15,7 @@
 		if($arreglo[$i]['Id']==$_POST['Id'])
 		{
 			$numero=$i;
-								
+
 		}
 		
 		$arreglo[$numero]['Cantidad']=$_POST['Cantidad'];
@@ -27,7 +27,6 @@
 			/*current car status*/
 			$current_status= $current_status+$arreglo[$i]['Cantidad'];
 			$_SESSION['current_cart'] = $current_status;  
-			
 		}
 
 	}
