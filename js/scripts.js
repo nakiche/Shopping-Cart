@@ -96,6 +96,7 @@ var inicio=function()
 		}
 });
 
+}
 
 	
 
