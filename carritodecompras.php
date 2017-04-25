@@ -167,6 +167,7 @@
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script type="text/javascript" src="./js/scripts.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 </head>
 
 <body>
@@ -268,9 +269,16 @@
 
 			}
 
+			?>
+
+			<!-- Mensaje de error -->	
+			<div class="error2">
+			<h2 class="errortext"></h2>			
+			</div>
+
+			<?php 
+
 			/*Current car status*/
-			
-			echo '<h2 class="error2"></h2>';			
 			echo '<h2 id="total">Items in your cart: ' .$current_status .' / Subtotal: $' .number_format($total,2). '</h2>';
 			echo '<h2>Your Current Cash is: $'.number_format($current,2). '</h2>';
 			echo '<p><a href="./carritodecompras.php?action=empty">Remove cart</a></p>';

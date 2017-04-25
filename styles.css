@@ -200,13 +200,21 @@ a:hover
 
 .error2
 {
+margin:0 auto; 
+padding:0;
+display: none;
+}
+
+.error2 h2
+{
 background: none repeat scroll 0 0 #BC1010; 
 border-radius: 20px 20px 20px 20px; 
 color: white; 
 font-weight: bold; 
+font: 18px 'Montserrat Alternates';
 padding: 10px 20px; 
 text-align: center;
-display: none;
+display: block;
 }
 
 .error3

@@ -12,6 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script type="text/javascript" src="./js/scripts.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 </head>
 
 <body>
@@ -97,7 +98,21 @@
 
 
 			}else{
-				echo '<h2 class="error3">Sorry your current cash is too low, check your cart</h2>';
+
+			?>	
+
+				<!-- Mensaje de error -->	
+				<div class="error2">
+				<h2 class="errortext">jkkjjkjkjk</h2>	
+				</div>
+
+				<script type="text/javascript"> 				
+ 				noEnoughMoney();
+				</script> 
+
+			<?php	
+
+				//echo '<h2 class="error3">Sorry your current cash is too low, check your cart</h2>';
 				
 				$_SESSION['current_cash'] = $current;
 

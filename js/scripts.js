@@ -20,18 +20,28 @@ function isNumberKey(evt)
 			
     		 if (x[i].value == 0)
     		 {
-    		 	var v= document.getElementsByClassName('error2');
-				v[0].style.display ="block";
-				v[0].innerHTML='Quantity cannot be less than 1';
+    		 	//var v= document.getElementsByClassName('error2');
+				//v[0].style.display ="block";
+				//v[0].innerHTML='Quantity cannot be less than 1';
     		 	 //alert('Quantity can not be less than 1 or empty ' + x[i].value);
     		 	 //alert('Quantity can not be less than 1 or empty');
     		 	 x[i].focus();
+    		 	 
+    		 	 $(document).ready(function(){
+					$(".errortext").text('Quantity cannot be less than 1');
+					$(".error2").fadeIn("slow");
+					
+				 });	
+
+    		 	 
     		 	 return false;
     		 	 
 
     		 }else{
-    		 		var v= document.getElementsByClassName('error2');
-					v[0].style.display ="none";
+    		 		$(document).ready(function(){
+					$(".error2").fadeOut("slow");
+					
+				 	});	
     		 }
 		}
 
@@ -111,9 +121,16 @@ function validarSelect()
 		if( indice == "" ) 
 		{  	
   		//alert("Please choose a transport type");
-  		var v= document.getElementsByClassName('error2');
-  		v[0].style.display ="block";
-		v[0].innerHTML='Please choose a transport type';
+  		//var v= document.getElementsByClassName('error2');
+  		//v[0].style.display ="block";
+		//v[0].innerHTML='Please choose a transport type';
+
+		$(document).ready(function(){
+		$(".errortext").text('Please choose a transport type');
+		$(".error2").fadeIn("slow");
+					
+		});	
+
   		document.getElementById("opciones").focus();
 		
   		return false;
@@ -130,12 +147,28 @@ function validarSelect2()
 
 		if( indice != "" ) 
 		{  	
-  		var v= document.getElementsByClassName('error2');
-		v[0].style.display ="none";
+  		//var v= document.getElementsByClassName('error2');
+		//v[0].style.display ="none";
+  		$(document).ready(function(){
+		$(".error2").fadeOut("slow");
+					
+		});	
+  		
   		}
+
+
 		
 }
- 
+
+function noEnoughMoney()
+{
+		
+		$(document).ready(function(){
+		$(".errortext").text('Sorry your current cash is too low, check your cart');
+		$(".error2").fadeIn("slow");
+					
+		});	
+ }
 		// if ( valor <= 0  || valor.length == 0 || /^\s+$/.test(valor)) 
 		//  {
  
