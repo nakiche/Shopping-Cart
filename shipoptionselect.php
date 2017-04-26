@@ -103,7 +103,7 @@
 
 				<!-- Mensaje de error -->	
 				<div class="error2">
-				<h2 class="errortext">jkkjjkjkjk</h2>	
+				<h2 class="errortext"></h2>	
 				</div>
 
 				<script type="text/javascript"> 				

@@ -113,9 +113,10 @@ a:hover
 	min-height:450px;
 	width: 85%;
 	border: 2px inset #DDD;
-	padding: 5px 5px;
+	padding: 20px 20px;
 	margin:0 auto;
 	background-color:#999;
+	box-sizing: border-box;
 }
 
 
@@ -176,7 +177,8 @@ a:hover
 {
 	font:1.2em 'Montserrat Alternates';
 	color:blue;
-
+	padding: 10px;
+	
 }
 
 .FBG_content p
@@ -207,9 +209,9 @@ display: none;
 
 .error2 h2
 {
-background: none repeat scroll 0 0 #BC1010; 
-border-radius: 20px 20px 20px 20px; 
-color: white; 
+background-color: #f9374e; 
+border-radius: 5px; 
+color: #fff; 
 font-weight: bold; 
 font: 18px 'Montserrat Alternates';
 padding: 10px 20px; 
@@ -217,18 +219,18 @@ text-align: center;
 display: block;
 }
 
-.error3
+/*.error3
 {
 background: none repeat scroll 0 0 #BC1010; 
-border-radius: 20px 20px 20px 20px; 
+border-radius: 5px; 
 color: white; 
 font-weight: bold; 
 padding: 10px 20px; 
 text-align: center;
 display: block;
 
-}
-/*products*/
+}*/
+/*products index*/
 .producto
 {
 	width: 23%;
@@ -236,8 +238,9 @@ display: block;
 	background-color: #c8c8c8;
 	border: 2px inset #DDD;
 	display: inline-block;
-	margin: 10px 2px 2px 11px;
-	padding: 0;
+	margin: 9px;
+	padding: 10px 10px;
+	box-sizing: border-box;
 }
 
 .cantidad 
@@ -256,6 +259,13 @@ font:0.8em 'Montserrat Alternates';
 .producto img
 {
 	margin:4px 2px;
+	-webkit-transition: -webkit-transform 0.4s linear;
+	-ms-transition:-ms-transform 0.4s linear; /*ie*/
+}
+
+.producto img:hover
+{
+  transform: scale(1.1, 1.1)
 }
 
 .producto span
@@ -320,15 +330,27 @@ font:0.8em 'Montserrat Alternates';
 {
 
 	width: 48%;
-	height: 350px;
+	height: 370px;
 	background-color: #c8c8c8;
 	border: 2px solid #DDD;
-	margin: 10px 2px 2px 11px;
-	padding: 0;
+	margin: 11px;;
+	padding: 10px 10px;
 	float: left;
-
+	box-sizing: border-box;
 
 }
+
+.details img
+{
+	-webkit-transition: -webkit-transform 0.4s linear;
+	-ms-transition:-ms-transform 0.4s linear; /*ie*/
+}
+
+.details img:hover
+{
+  transform: scale(1.1, 1.1)
+}
+
 
 .details span
 {
