@@ -18,6 +18,8 @@
 	<script type="text/javascript" src="./js/scripts.js"></script>
 	<script src="./js/star-rating.min.js" type="text/javascript"></script>
 
+	<link href='images/favicon.ico' rel='shortcut icon' type='image/png'>
+
 </head>
 
 <body>

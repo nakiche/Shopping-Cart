@@ -26,11 +26,13 @@ $current_status=($_SESSION['current_cart']);
 	<title>CBA SHOPPING CART</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" rel="stylesheet">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script> -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script> -->
 	<script type="text/javascript"  src="./js/scripts.js"></script>
 	<script src="./js/star-rating.min.js" type="text/javascript"></script>
 
+	<link href='images/favicon.ico' rel='shortcut icon' type='image/png'>
 </head>
 	
 <body>
