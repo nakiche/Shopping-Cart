@@ -51,7 +51,8 @@ $current_status=($_SESSION['current_cart']);
              
 	<div class="FBG">
     	<div class="FBG_content">
-
+    	
+    	
     		<div class="inline">
     		
     			<h1>Products</h1>
@@ -84,7 +85,7 @@ $current_status=($_SESSION['current_cart']);
 			$consulta="SELECT * FROM productos";
 		
 			//establecemos un filtro
-		
+			
 			$resulados= mysqli_query($conexion,$consulta);
 
 			while($fila=mysqli_fetch_array($resulados, MYSQL_ASSOC))
@@ -101,6 +102,8 @@ $current_status=($_SESSION['current_cart']);
 					<input type="hidden" value="<?php echo $fila['ID'] ;?>" name="id">
 					<span>Quantity:<input type="number" value="1" name="quantity" onfocus="this.blur();" min="1" onkeypress="return noEntries(event);"></span><br>
 					<input type="submit" class="button" value="Add to cart!"><br>
+					
+
 					</form>
 					
 					<input value="<?= getRatingByProductId(connect(), $fila['ID']); ?>" type="number" class="rating" min=0 max=5 step=0.1 data-size="md" data-stars="5" productId="<?php echo $fila['ID'] ;?>" >
