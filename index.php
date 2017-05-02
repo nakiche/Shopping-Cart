@@ -101,7 +101,7 @@ $current_status=($_SESSION['current_cart']);
 					<span>Price: <?php echo '$ ' .$fila['precio']. ' ';?></span><br>
 					<input type="hidden" value="<?php echo $fila['ID'] ;?>" name="id">
 					<span>Quantity:<input type="number" value="1" name="quantity" onfocus="this.blur();" min="1" onkeypress="return noEntries(event);"></span><br>
-					<input type="submit" class="button" value="Add to cart!"><br>
+					<input type="submit" value="Add to cart!"><br>
 					
 
 					</form>

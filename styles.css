@@ -306,8 +306,9 @@ font:0.8em 'Montserrat Alternates';
 	height: 30px;
 	text-align: center;
 	font:0.9em 'Montserrat Alternates';
- 	color: red;
+ 	color: black;
  	background-color: #999;
+    
  	margin: 4px 4px;	
 
 }
@@ -372,7 +373,7 @@ font:0.8em 'Montserrat Alternates';
 	height: 30px;
 	text-align: center;
 	font:0.9em 'Montserrat Alternates';
- 	color: red;
+ 	color: black;
  	background-color: #999;
  	margin: 4px 4px;	
 
