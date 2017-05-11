@@ -52,14 +52,19 @@ $current_status=($_SESSION['current_cart']);
 	<div class="FBG">
     	<div class="FBG_content">
     	
-    	
+    			<div class="titulo">
+    			<h1>Products</h1>
+    			</div>	
+
     		<div class="inline">
     		
-    			<h1>Products</h1>
+
     	 		<div class="cart" >
     	 		<a href="./carritodecompras.php" title="<?php echo "My Cart - " . $current_status . " Items" ;?>"><img src="images/carrito.png" width="32" height="32" border="0" alt="mycart"></a>
     	 		<h2><?php echo '(' . $current_status. ')';?></h2>	
     	 		</div>    	 	
+    	 		
+
 			</div>
         
 		<?php
