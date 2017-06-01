@@ -170,9 +170,12 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 
 	<link href='images/favicon.ico' rel='shortcut icon' type='image/png'>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
 
 <body>
+<div class="contenedor">
+
 	<div class="block_header">
        <div class="header">
     		 
@@ -181,35 +184,36 @@
         	 </div>
     
 			           
-             <div class="clr"></div>
+        <div class="clr"></div>
   		</div>  
-  		 <div class="clr"></div>
+    <div class="clr"></div>
     </div>   
              
 	<div class="FBG">
     	<div class="FBG_content"> 
         
-        
-        <div class="inline">
+          <div class="products_listing">	
+        	<div class="inline">
+        		
     		
-    		<h3>Shipping and payment</h3>
+    			<h3>Shipping and payment</h3>
     		
 
-    		<?php
+    			<?php
 
-    		if(isset($_SESSION['carrito'])) /*Valido si existe una sesion previa*/
-			{
+    			if(isset($_SESSION['carrito'])) /*Valido si existe una sesion previa*/
+				{
 
-			?>	
+				?>	
     		
-	    	<h2><a href="index.php"> Search products </a></h2>
-    		<?php
+	    		<h2><a href="index.php"> Search products </a></h2>
+    			<?php
 
-    		}
+    			}
 
-    		?>
+    			?>
 
-		</div>
+			</div>
 		
 	<?php
 		
@@ -255,7 +259,6 @@
                         >Remove from car</a>-->
                        <span class="error"></span>
 				</div>
-
         	</div>
 
         	
@@ -271,8 +274,9 @@
 
 			}
 
-			?>
 
+			?>
+			</div>
 			<!-- Mensaje de error -->	
 			<div class="error2">
 			<h2 class="errortext"></h2>			
@@ -332,6 +336,10 @@
 		</div>
 
      <div class="clr"></div>
-</div>             
+
+	</div>
+
+</div>
+             
 </body>
 </html>

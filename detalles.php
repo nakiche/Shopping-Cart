@@ -51,7 +51,7 @@
     	 			<h2><?php echo '(' . $current_status. ')';?></h2>	
     	 		</div>    	 	
 			
-    <div class="products_listing">	    
+    		    
 	<?php
 		require 'conexion.php';
 		include_once 'rating.php';
@@ -81,6 +81,7 @@
 		{
 			
 	?>
+		<div class="products_details">
 
 			<div class="details">
 				<div class="centrado">
@@ -93,33 +94,25 @@
 					<input type="submit" class="button" value="Add to cart!" ><br>
 					</form>
 							
+					
 					
 					<input value="<?= getRatingByProductId(connect(), $fila['ID']); ?>" type="number" class="rating" min=0 max=5 step=0.1 data-size="md" data-stars="5" productId="<?php echo $fila['ID'] ;?>">
 					
 
                 </div>
 			</div>
+			
+			<div class="details"> 
 
-			<div class="details">
-				<!-- <div class="justificado">
-				<span><?php echo $fila['descripcion'] ;?></span>
-				</div> -->
-				<div class="centrado">
-					<form action="carritodecompras.php" method="get" >
-					<img src="./images/<?php echo $fila['imagen'];?>"><br>
-					<span>Product: <?php echo $fila['nombre'] ;?></span><br>
-					<span>Price: <?php echo '$ ' .$fila['precio']. ' ';?></span><br>
-					<input type="hidden" value="<?php echo $fila['ID'] ;?>" name="id">
-					<span>Quantity:<input type="number" value="1" name="quantity" onfocus="this.blur();" min="1" onkeypress="return noEntries(event);"></span><br>
-					<input type="submit" class="button" value="Add to cart!" ><br>
-					</form>
-							
-					
-					<input value="<?= getRatingByProductId(connect(), $fila['ID']); ?>" type="number" class="rating" min=0 max=5 step=0.1 data-size="md" data-stars="5" productId="<?php echo $fila['ID'] ;?>">
-					
+				 <div class="justificado">
 
-                </div>
-			</div>	
+				<p><?php echo $fila['descripcion'] ;?></p>
+
+				</div> 
+	
+			</div>	 
+
+		<div>	
 
 			
 			
@@ -131,11 +124,12 @@
 			
 			?>
 			<div class="clr"></div>
+
 			<div class="centrado">
 				<a href="index.php"> Search products </a>   
 			</div>
 
-		 </div> 
+		 	
 		  
 		</div>
     	 <div class="clr"></div>

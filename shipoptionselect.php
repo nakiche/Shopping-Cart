@@ -15,9 +15,11 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 
 	<link href='images/favicon.ico' rel='shortcut icon' type='image/png'>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
 
 <body>
+<div class="contenedor">
 	<div class="block_header">
        <div class="header">
     		 
@@ -124,7 +126,7 @@
     		
     		
     	 		<div class="cart2" >
-    	 		<a href="./carritodecompras.php" title="My cart"><img src="images/shop-cart-add-icon.png" width="80" height="80" border="0" alt="mycart"></a><br>
+    	 		<a href="./carritodecompras.php" title="My cart"><img src="images/shop-cart-add-icon.png"  alt="mycart"></a><br>
     	 		</div>	
     	 			 	
 				</div>
@@ -160,5 +162,6 @@
 
      <div class="clr"></div>
 </div>             
+</div>
 </body>
 </html>
