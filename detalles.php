@@ -19,10 +19,12 @@
 	<script src="./js/star-rating.min.js" type="text/javascript"></script>
 
 	<link href='images/favicon.ico' rel='shortcut icon' type='image/png'>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
 </head>
 
 <body>
+<div class="contenedor">
 	<div class="block_header">
        <div class="header">
     		 
@@ -31,23 +33,25 @@
         	 </div>
     
 			           
-             <div class="clr"></div>
+             
   		</div>  
-  		 <div class="clr"></div>
+  		 
     </div>   
              
 	<div class="FBG">
     	<div class="FBG_content">
     	
-    		<div class="inline">
     		
+    			
+    			<div class="titulo">
     			<h1>Details</h1>
+    	 		</div>
     	 		<div class="cart" >
     	 			<a href="./carritodecompras.php" title="<?php echo "My Cart - " . $current_status . " Items" ;?>"><img src="images/carrito.png" width="32" height="32" border="0" alt="mycart"></a>
     	 			<h2><?php echo '(' . $current_status. ')';?></h2>	
     	 		</div>    	 	
-			</div>
-        
+			
+    <div class="products_listing">	    
 	<?php
 		require 'conexion.php';
 		include_once 'rating.php';
@@ -87,28 +91,35 @@
 					<input type="hidden" value="<?php echo $fila['ID'] ;?>" name="id">
 					<span>Quantity:<input type="number" value="1" name="quantity" onfocus="this.blur();" min="1" onkeypress="return noEntries(event);"></span><br>
 					<input type="submit" class="button" value="Add to cart!" ><br>
-					
-					
 					</form>
 							
-					<div class="width">
+					
 					<input value="<?= getRatingByProductId(connect(), $fila['ID']); ?>" type="number" class="rating" min=0 max=5 step=0.1 data-size="md" data-stars="5" productId="<?php echo $fila['ID'] ;?>">
-					</div>		
-                	
+					
 
-				</div>
+                </div>
 			</div>
 
 			<div class="details">
-				<div class="justificado">
+				<!-- <div class="justificado">
 				<span><?php echo $fila['descripcion'] ;?></span>
-				</div>
-			</div>
+				</div> -->
+				<div class="centrado">
+					<form action="carritodecompras.php" method="get" >
+					<img src="./images/<?php echo $fila['imagen'];?>"><br>
+					<span>Product: <?php echo $fila['nombre'] ;?></span><br>
+					<span>Price: <?php echo '$ ' .$fila['precio']. ' ';?></span><br>
+					<input type="hidden" value="<?php echo $fila['ID'] ;?>" name="id">
+					<span>Quantity:<input type="number" value="1" name="quantity" onfocus="this.blur();" min="1" onkeypress="return noEntries(event);"></span><br>
+					<input type="submit" class="button" value="Add to cart!" ><br>
+					</form>
+							
+					
+					<input value="<?= getRatingByProductId(connect(), $fila['ID']); ?>" type="number" class="rating" min=0 max=5 step=0.1 data-size="md" data-stars="5" productId="<?php echo $fila['ID'] ;?>">
+					
 
-			<div class="centrado">
-				<a href="index.php"> Search products </a>   
-			</div>
-
+                </div>
+			</div>	
 
 			
 			
@@ -119,13 +130,17 @@
 		mysqli_close($conexion);
 			
 			?>
+			<div class="clr"></div>
+			<div class="centrado">
+				<a href="index.php"> Search products </a>   
+			</div>
 
-		  
+		 </div> 
 		  
 		</div>
     	 <div class="clr"></div>
 	</div>          
 
-
+</div>
 </body>
 </html>

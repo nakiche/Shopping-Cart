@@ -33,14 +33,16 @@ $current_status=($_SESSION['current_cart']);
 	<script src="./js/star-rating.min.js" type="text/javascript"></script>
 
 	<link href='images/favicon.ico' rel='shortcut icon' type='image/png'>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
 	
 <body>
+<div class="contenedor">
 	<div class="block_header">
        <div class="header">
     		 
         	 <div class="logo">
-              <a href="./index.php"><img src="images/sc.png" width="265" height="78" 	border="0" alt="logo"></a>
+              <a href="./index.php"><img src="images/sc.png" border="0" alt="logo"></a>
         	 </div>
     
 			           
@@ -56,16 +58,13 @@ $current_status=($_SESSION['current_cart']);
     			<h1>Products</h1>
     			</div>	
 
-    		<div class="inline">
-    		
-
     	 		<div class="cart" >
     	 		<a href="./carritodecompras.php" title="<?php echo "My Cart - " . $current_status . " Items" ;?>"><img src="images/carrito.png" width="32" height="32" border="0" alt="mycart"></a>
-    	 		<h2><?php echo '(' . $current_status. ')';?></h2>	
+    	 		<h2><?php echo '('. $current_status.')';?></h2>	
     	 		</div>    	 	
     	 		
 
-			</div>
+		<div class="products_listing">	
         
 		<?php
 			require 'conexion.php';
@@ -126,13 +125,13 @@ $current_status=($_SESSION['current_cart']);
 			mysqli_close($conexion);
 		
 		?>
-		
+		</div>
 	 		<div class="clr"></div>
 		</div>
     	 <div class="clr"></div>
 	</div>             
 
 	 
-
+</div>
 </body>
 </html>

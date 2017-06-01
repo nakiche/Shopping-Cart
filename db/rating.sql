@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-04-2017 a las 18:28:40
+-- Tiempo de generación: 16-05-2017 a las 17:44:40
 -- Versión del servidor: 5.6.17
 -- Versión de PHP: 5.5.12
 
@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `rating` (
   `product_id` int(11) NOT NULL,
   `vote` float NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=24 ;
 
 --
 -- Volcado de datos para la tabla `rating`
@@ -51,7 +51,16 @@ INSERT INTO `rating` (`id`, `product_id`, `vote`) VALUES
 (11, 2, 4.4),
 (12, 4, 0.6),
 (13, 3, 1.4),
-(14, 2, 5);
+(14, 2, 5),
+(15, 3, 4.9),
+(16, 4, 5),
+(17, 4, 4.9),
+(18, 4, 5),
+(19, 4, 5),
+(20, 4, 5),
+(21, 4, 5),
+(22, 3, 5),
+(23, 4, 1.9);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -192,7 +192,7 @@
         
         <div class="inline">
     		
-    		<h3>Shipping and payment</h3><br>
+    		<h3>Shipping and payment</h3>
     		
 
     		<?php

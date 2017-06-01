@@ -26,6 +26,13 @@ a:hover
 	text-decoration:underline;
 } 
 
+.contenedor 
+{
+  width: 100%;
+  margin: 0 auto;	
+  overflow: hidden;
+}
+
 /*rating*/
 .rating-container .caption,.rating-container .clear-rating,.rating-container 
 .rating{display:inline-block;vertical-align:middle}
@@ -58,7 +65,7 @@ a:hover
 .clear-rating{color:#aaa;cursor:not-allowed;font-size:60%;padding-right:5px}
 .clear-rating-active{cursor:pointer!important}
 .clear-rating-active:hover{color:#843534}
-.rating-container .caption{color:#999;font-size:60%;margin-top:-0.6em;margin-left:5px;margin-right:0}
+.rating-container .caption{color:#999;font-size:55%;margin-top:-0.6em;margin-left:5px;margin-right:0}
 .rating-rtl 
 .caption{margin-right:5px;margin-left:0}@media print{.rating-container .clear-rating{display:none}}
 
@@ -69,6 +76,7 @@ a:hover
 	 margin:0; 
 	 padding:0;
 	 background-color:#0c56c1;
+	 width: 100%;
 	 
 }
 
@@ -76,17 +84,22 @@ a:hover
 {
 	margin:0 auto;
 	padding:0 ; 
-	width: 80%;
+	max-width: 960px;
 
 }
 
 .logo 
 {
-	padding:10px 10px;
-	margin:0;
-	text-align: center; 
-
+	padding:6px 6px;
 	
+}
+
+.logo img
+{
+	max-width: 100%;
+	height: auto;
+	display: block;
+	margin: 0 auto;
 }
 
 
@@ -105,34 +118,70 @@ a:hover
 	margin:0;
 	padding:0; 
 	background-color:#999;
+	width: 100%;
 }
 
 
 .FBG_content
 {	
 	min-height:450px;
-	width: 85%;
+	max-width: 960px;
 	border: 2px inset #DDD;
-	padding: 20px 20px;
+	padding: 3px 3px;
 	margin:0 auto;
 	background-color:#999;
 	box-sizing: border-box;
 }
 
-
+.titulo
+{
+	width: 57%;
+	display: inline-block;
+}
 .titulo h1
 { 
 	padding:0; 
 	margin: 0 ;
-	display: block;
-	text-align:center;
 	font:3.5em 'Montserrat Alternates';
+	text-align: right;
 
 }
 
 .cart
 {
+	width: 40%;
+	display: inline-block;
+	padding: 0;
+	text-align: right;
+	
+}
+
+.products_listing
+{
+	width: 100%;
 	display: block;
+	margin: 0 auto;
+	padding: 0;
+	text-align: center;
+}
+
+.producto
+{
+	max-width: 24%;
+	min-width: 220px;
+	height: auto;
+	background-color: #c8c8c8;
+	border: 2px inset #DDD;
+	display: inline-block;
+	margin-top: 3px;
+	padding: 3px;
+	box-sizing: border-box;
+}
+
+.cart h2
+
+{
+	display: inline-block;
 	padding: 0;
 	text-align: right;
 	margin: 1px 15px;
@@ -146,19 +195,17 @@ a:hover
 	
 }
 
-.inline h2
+.inline h1
 { 
 	padding:0; 
 	margin:0;
-	display: inline-block;
+	text-align: center;
 	font:1em 'Montserrat Alternates';
 }
 
 .inline h3
 {
 	font:2em 'Montserrat Alternates';
-	display: inline-block;
-	width: 100%;
 	color:blue;
 	text-align: center;
 	padding: 0; 
@@ -176,7 +223,8 @@ a:hover
 {
 	font:1.2em 'Montserrat Alternates';
 	color:blue;
-	padding: 10px;
+	padding:0;
+	margin: 0;
 	
 }
 
@@ -218,29 +266,7 @@ text-align: center;
 display: block;
 }
 
-/*.error3
-{
-background: none repeat scroll 0 0 #BC1010; 
-border-radius: 5px; 
-color: white; 
-font-weight: bold; 
-padding: 10px 20px; 
-text-align: center;
-display: block;
 
-}*/
-/*products index*/
-.producto
-{
-	width: 23%;
-	height: auto;
-	background-color: #c8c8c8;
-	border: 2px inset #DDD;
-	display: inline-block;
-	margin: 9px;
-	padding: 10px 10px;
-	box-sizing: border-box;
-}
 
 .cantidad 
 {
@@ -260,6 +286,7 @@ font:0.8em 'Montserrat Alternates';
 	margin:4px 2px;
 	-webkit-transition: -webkit-transform 0.4s linear;
 	-ms-transition:-ms-transform 0.4s linear; /*ie*/
+	max-width: 100%
 }
 
 .producto img:hover
@@ -277,16 +304,10 @@ font:0.8em 'Montserrat Alternates';
 	font:1em 'Montserrat Alternates';
 }
 
-.producto input
-{
-	width: 100px;
-
-}
-
 .producto input[type="number"]
 {
-	width: 40px;
-	height: 20px;
+	width: 16%;
+	height: auto;
 	background-color: #c8c8c8;
 	text-align: center;
 }
@@ -302,40 +323,42 @@ font:0.8em 'Montserrat Alternates';
 .producto input[type="submit"]
 {
 	width: 50%;
-	height: 30px;
+	height: auto;
 	text-align: center;
 	font:0.9em 'Montserrat Alternates';
  	color: black;
  	background-color: #999;
-    
- 	margin: 4px 4px;	
+    margin: 3% 3%;	
 
 }
 
-/*centered*/	
 .centrado
 {
 	text-align: center;
+
 }
 
 .justificado
 {
 
 	text-align: justify;
-	font:1.5em 'Montserrat Alternates';
+	font:1.2em 'Montserrat Alternates';
+	
+
 }
 
 .details
 {
 
-	width: 48%;
-	height: 370px;
+	width: 46%;
+	min-width: 300px;
+	min-height: 400px;
 	background-color: #c8c8c8;
-	border: 2px solid #DDD;
-	margin: 11px;;
-	padding: 10px 10px;
-	float: left;
+	border: 2px inset #DDD;
+	margin: 3px;
+	padding: 3px;
 	box-sizing: border-box;
+	display: inline-block;
 
 }
 
@@ -343,6 +366,8 @@ font:0.8em 'Montserrat Alternates';
 {
 	-webkit-transition: -webkit-transform 0.4s linear;
 	-ms-transition:-ms-transform 0.4s linear; /*ie*/
+	max-width: 100%;
+	margin:4px 2px;
 }
 
 .details img:hover
@@ -353,15 +378,15 @@ font:0.8em 'Montserrat Alternates';
 
 .details span
 {
-	font:0.8em 'Montserrat Alternates';
+	font:1em 'Montserrat Alternates';
 
 }
 
 
 .details input[type="number"]
 {
-	width: 40px;
-	height: 20px;
+	width: 11%;
+	min-height: 20px;
 	background-color: #c8c8c8;
 	text-align: center;
 }	
@@ -369,19 +394,22 @@ font:0.8em 'Montserrat Alternates';
 .details input[type="submit"]
 {
 	width: 25%;
-	height: 30px;
+	min-height: 30px;
 	text-align: center;
 	font:0.9em 'Montserrat Alternates';
  	color: black;
  	background-color: #999;
  	margin: 4px 4px;	
+ 	box-sizing: border-box;
+
 
 }
 
 .width 
 {
-	width: 50%;
-	display: inline-block;
+	width: 40%;
+	display: block;
+	margin: 0 auto
 	
 }
 
@@ -405,12 +433,91 @@ font:0.8em 'Montserrat Alternates';
 
 }
 
-
-
 /*clear*/
 .clr
 {
 	clear:both;
 	padding:0; 
 	margin:0; 
+}
+
+
+@media (max-width: 900px) 
+{
+	.products_listing
+	{
+		text-align: justify;
+		width: 85%;
+	}
+
+}
+
+/*responsive*/  
+@media (max-width: 800px) 
+{
+  /*body
+  {
+  	text-align: center;
+  }
+  */
+
+	.titulo
+	{
+		width: 100%;
+		
+	}
+
+	.titulo h1
+	{
+		text-align: center;
+		
+	}
+
+	 
+	.cart
+	{
+		width: 100%;
+		padding: 5px 10px;
+		box-sizing: border-box;
+		
+	}
+
+
+
+	.producto
+		{
+			max-width: 24%;
+			min-width: 240px;
+		
+		}
+
+	.products_listing
+	{
+		text-align: center;
+			
+	}
+
+}
+
+
+
+/*responsive*/  
+@media (max-width: 600px) 
+{
+	.producto
+	{
+		max-width: 24%;
+		min-width: 220px;
+	
+	}
+
+	.products_listing
+	{
+	
+	text-align: center;
+	width: 90%;
+
+	}
+
+
 }
