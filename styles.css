@@ -388,7 +388,7 @@ font:0.8em 'Montserrat Alternates';
 
 .details input[type="submit"]
 {
-	width: 30%;
+	width: auto;
 	min-height: 30px;
 	text-align: center;
 	font:0.9em 'Montserrat Alternates';
