@@ -163,14 +163,13 @@
 <html lang="es">
 <head>
 <meta charset="utf-8"/>
-	<title>CBA SHOPPING CART</title>
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-	<script type="text/javascript" src="./js/scripts.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-
-	<link href='images/favicon.ico' rel='shortcut icon' type='image/png'>
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<title>SHOPPING CART</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="./js/scripts.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<link href='images/favicon.ico' rel='shortcut icon' type='image/png'>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
 
 <body>
@@ -193,11 +192,8 @@
     	<div class="FBG_content"> 
         
           <div class="products_listing">	
-        	<div class="inline">
         		
-    		
-    			<h3>Shipping and payment</h3>
-    		
+    			<h3>Shipping and payment</h3> 		
 
     			<?php
 
@@ -212,9 +208,7 @@
     			}
 
     			?>
-
-			</div>
-		
+	
 	<?php
 		
 		$current=$_SESSION['current_cash'];
@@ -241,28 +235,18 @@
                     <span><?php echo $datos[$i]['Nombre'];?></span><br>
                     <span>Price: <?php echo  '$ ' .$datos[$i]['Precio'].'';?></span><br>
                     <span>Quantity: 
-                    	<input type="text" value="<?php echo $datos[$i]['Cantidad'];?>"
-                        data-id="<?php echo $datos[$i]['Id'];?>"
-                        data-precio="<?php echo $datos[$i]['Precio'];?>"
-                        class="cantidad" onkeypress="return isNumberKey(event);" onkeyup="validacion();"></span><br>
+                    <input type="text" value="<?php echo $datos[$i]['Cantidad'];?>"
+                    data-id="<?php echo $datos[$i]['Id'];?>"
+                    data-precio="<?php echo $datos[$i]['Precio'];?>"
+                    class="cantidad" onkeypress="return isNumberKey(event);" onkeyup="validacion();"></span><br>
+                    <span class="subtotal">Subtotal:<?php echo ' $' . $datos[$i]['Cantidad']*$datos[$i]['Precio'].' ';?></span><br>
+                    <input type="submit" class="button" value="Remove Item" onclick="document.location.href='./carritodecompras.php?action=remove&code=<?php echo $datos[$i]['Id']; ?>'"><br>
+                    
+                    <span class="error"></span>
 
-                        
-                     	<span class="subtotal">Subtotal:<?php echo ' $' . $datos[$i]['Cantidad']*$datos[$i]['Precio'].' ';?></span><br>
-
-                        <!-- <a href="./carritodecompras.php?action=remove&code=<?php echo $datos[$i]['Id']; ?>" >Remove Item</a> -->
-                        <input type="submit" class="button" value="Remove Item" onclick="document.location.href='./carritodecompras.php?action=remove&code=<?php echo $datos[$i]['Id']; ?>'"><br>
-                        
-                        <!--<a href="#" id="get"   
-                        data-id="<?php echo $datos[$i]['Id'];?>"Remove Item
-                        data_precio="<?php echo $datos[$i]['Precio'];?>"
-                        data-cantidad="<?php echo $datos[$i]['Cantidad'];?>"
-                        >Remove from car</a>-->
-                       <span class="error"></span>
 				</div>
         	</div>
-
-        	
-		
+	
 			<?php  
 		
 			$total=($datos[$i]['Cantidad']*$datos[$i]['Precio'])+$total;    	
@@ -276,7 +260,7 @@
 
 
 			?>
-			</div>
+		  </div>
 			<!-- Mensaje de error -->	
 			<div class="error2">
 			<h2 class="errortext"></h2>			
@@ -288,19 +272,16 @@
 			echo '<h2 id="total">Items in your cart: ' .$current_status .' / Subtotal: $' .number_format($total,2). '</h2>';
 			echo '<h2>Your Current Cash is: $'.number_format($current,2). '</h2>';
 			echo '<p><a href="./carritodecompras.php?action=empty">Remove cart</a></p>';
-			
-		}else{	
+			}
+			else
+			{	
 			
 			echo '<h2 id="total">Items in your cart: ' .$current_status .' / Subtotal: $' .number_format($total,2). '</h2>';
 			echo '<h2>Your Current Cash is: $'.number_format($current,2). '</h2>';
 			echo '<h2><a href="index.php"> Search products </a></h2>';
-		}			
-			
-
+			}			
 
 			?>
-
-			
 		
 		<?php 
 		
@@ -308,38 +289,30 @@
 		{	
        		if (!empty($datos))
        		{	
-       		//if(isset($_GET['id'])) /*Valido si me están pasando un id*/
-			//{
+     
        	?>
        		<div class="centrado">
-       		<form action="shipoptionselect.php" name="shipping" method="get" onsubmit="return validarSelect(this);" onchange="validarSelect2();" >
-       			
+       		  <form action="shipoptionselect.php" name="shipping" method="get" onsubmit="return validarSelect(this);" onchange="validarSelect2();" >	
        			<select id="opciones" name="pick" class="select">
-				<option value="" selected="">Select Transport type</option>
-  				<option value="pickup" id="Pick">Pick up - Free</option>
- 				<option value="ups" id="UPS">UPS - 5$</option>
+				 <option value="" selected="">Select Transport type</option>
+  				 <option value="pickup" id="Pick">Pick up - Free</option>
+ 				 <option value="ups" id="UPS">UPS - 5$</option>
   				</select>
   				<input type="submit" class="button2" value="Pay!" onclick="return validacion();" >
-
-  			</form>
-
+  			  </form>
 			</div>
-		<?php
 
+		<?php
 
 			}
 		}
 		
-
 		?>
 
 		</div>
-
-     <div class="clr"></div>
-
 	</div>
 
 </div>
-             
+            
 </body>
 </html>
